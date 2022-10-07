@@ -1,0 +1,9 @@
+[submodule "lab_python_intro"]
+	path = lab_python_intro
+	url = https://github.com/korzck/lab_python_intro
+[submodule "lab_python_oop"]
+	path = lab_python_oop
+	url = https://github.com/korzck/lab_python_oop
+[submodule "lab_python_fp"]
+	path = lab_python_fp
+	url = https://github.com/korzck/lab_python_fp
