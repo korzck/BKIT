@@ -76,7 +76,7 @@ def main():
         res32.append((i.name, sum([ _[3] for _ in s_houses])))
     print(res32)
     
-    print('Задание Е3')
+    print('Задание А3')
     res33 = []
     for i in filter(lambda a: "переулок" in streets[a[1]-1].name, many_to_many):
         res33.append((streets[i[1]-1].name, [ _.name for _ in filter(lambda a: a.street_id==i[1], houses)]))
