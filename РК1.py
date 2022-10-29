@@ -60,32 +60,27 @@ def main():
         for hs in houses_streets 
         if s.id == hs.street_id]
     
-    many_to_many = [(h.id, name, street_id) 
+    many_to_many = [(h.id, street_id) 
         for name, street_id, house_id in many_to_many_temp
         for h in houses if h.id==house_id]
  
-    print('Задание Е1')
-    res_61 = filter(lambda a: 'переулок' in a[1] ,one_to_many)
-    print(list(res_61))
+    print('Задание А1')
+    res_31 = sorted(one_to_many, key=itemgetter(1))
+    print(list(res_31))
     
-    print('Задание Е2')
-    res62 = []
+    print('Задание А2')
+    res32 = []
     for i in streets:
         
         s_houses = [ _ for _ in filter(lambda a: a[1]==i.name ,one_to_many )]
-        if len(s_houses) > 0:
-            average_price = sum([ _[3] for _ in s_houses])/len(s_houses)
-        res62.append((i.name, round(average_price, 2)))
-    print(res62)
+        res32.append((i.name, sum([ _[3] for _ in s_houses])))
+    print(res32)
     
     print('Задание Е3')
-    res63 = []
-    for i in streets:
-        s_houses = [ _ for _ in filter(lambda a: a[2]==i.id and houses[a[0]-1].name[0] == 'Г', many_to_many)]
-        for _ in s_houses: 
-            if houses[_[0]-1].name not in res63: 
-                res63.append((houses[_[0]-1].name, _[1]))
-    print(res63)
+    res33 = []
+    for i in filter(lambda a: "переулок" in streets[a[1]-1].name, many_to_many):
+        res33.append((streets[i[1]-1].name, [ _.name for _ in filter(lambda a: a.street_id==i[1], houses)]))
+    print(res33)
 
 if __name__ == '__main__':
     main()
