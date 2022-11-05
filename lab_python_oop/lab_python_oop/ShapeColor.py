@@ -1,6 +1,3 @@
-from lab_python_oop.Shape import Shape
-
-
 class ShapeColor():
     def __init__(self):
         self.value = None
