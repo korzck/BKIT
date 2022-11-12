@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, types, executor
 from aiogram.dispatcher.filters import Text
 import datetime
 
-TOKEN = '5636096814:AAE_3PCX3sQOaVa7HEZekrqXaoO9xxgku9c'
+TOKEN = ''
 kb = [[types.KeyboardButton(text="/credits")]]
 keyboard = types.ReplyKeyboardMarkup(keyboard=kb,resize_keyboard=True)
 
