@@ -3,12 +3,13 @@ from countries import countries
 from aiogram import Bot, Dispatcher, types, executor
 from aiogram.dispatcher.filters import Text
 import datetime
+import asyncio
 
 TOKEN = ''
 kb = [[types.KeyboardButton(text="/credits")]]
 keyboard = types.ReplyKeyboardMarkup(keyboard=kb,resize_keyboard=True)
 
-def nationality(name: str) -> dict:
+async def nationality(name: str) -> dict:
     r = requests.get(f'https://api.nationalize.io/?name={name}').json()
     l = {}
     for i in r['country']:
@@ -31,7 +32,7 @@ async def credits(message: types.Message):
 async def get_nationality(message: types.Message):
     print(f'User: {message.from_user.username}, Time: {datetime.datetime.now()} \nMessage: {message.text}')
     try:
-        n = nationality(message.text)
+        n = await nationality(message.text)
         reply = ''
         for country, probability in n.items():
             reply += country + ' ' + str(probability) + '% \n'
