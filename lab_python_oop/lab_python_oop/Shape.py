@@ -1,6 +1,6 @@
 from abc import ABC
 from abc import abstractmethod
-from ShapeColor import ShapeColor
+from .ShapeColor import ShapeColor
 
 class Shape(ABC): 
     def __init__(self, name):
@@ -17,6 +17,3 @@ class Shape(ABC):
 
     def __repr__(self):
         return "{}'s area is {:.3f} and color is {}".format(self.get_name(), self.area(), self.color.value)
-    
-    # def __str__(self):
-    #     return "{}'s area is {:.3f} and color is {}".format(self.get_name(), self.area(), self.color.value)

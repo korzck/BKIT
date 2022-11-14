@@ -1,5 +1,4 @@
-from turtle import width
-from Rectangle import Rectangle
+from .Rectangle import Rectangle
 
 class Square(Rectangle):
     def __init__(self, width=0, color=None, name=''):

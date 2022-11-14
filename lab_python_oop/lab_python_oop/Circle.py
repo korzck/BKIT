@@ -1,7 +1,6 @@
-from Shape import Shape
 import math
+from .Shape import Shape
 
-from ShapeColor import ShapeColor
 
 class Circle(Shape):
     def __init__(self, radius=0, color=None, name=''):
@@ -14,3 +13,4 @@ class Circle(Shape):
 
     def get_name(self):
         return self.name
+    
