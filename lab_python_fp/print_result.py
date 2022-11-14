@@ -15,6 +15,7 @@ def print_result(f):
 def test123(a):
     return a
 
-test123({'a':1, 'b':2, 'c':3})
-newName = test123
-newName([5,7,2,9,1,4,3])
+if __name__ == '__main__':
+    test123({'a':1, 'b':2, 'c':3})
+    newName = test123
+    newName([5,7,2,9,1,4,3])

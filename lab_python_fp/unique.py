@@ -25,8 +25,9 @@ class Unique(object):
     def __iter__(self):
         self.begin = 0
         return self
-
-# a = [1,4,87,3,5,7,2,4,6,4,3,6,3,4,2]
-# b = ['A', 'a', 'B', 'b']
-# for i in Unique(b, ignore_case=True):
-#     print(i)
+        
+if __name__ == '__main__':
+    a = [1,4,87,3,5,7,2,4,6,4,3,6,3,4,2]
+    b = ['A', 'a', 'B', 'b']
+    for i in Unique(b, ignore_case=True):
+        print(i)

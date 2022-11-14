@@ -16,3 +16,7 @@ def field(items, *args):
         return r
     except:
         print("Not list of dicts as argument passed")
+
+if __name__ == '__main__':
+    for i in field(goods, 'title', 'price'):
+        print(i)

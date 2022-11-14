@@ -1,9 +1,9 @@
 import sys
 #changed cwd to testible dir
-sys.path.append("../lab_python_oop/lab_python_oop")
-from Circle import Circle
-from Rectangle import Rectangle
-from Square import Square
+sys.path.append("../lab_python_oop")
+from lab_python_oop.Rectangle import Rectangle
+from lab_python_oop.Circle import Circle
+from lab_python_oop.Square import Square
 
 import unittest
 
@@ -32,5 +32,3 @@ class MyTesting(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-

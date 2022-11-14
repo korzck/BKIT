@@ -32,5 +32,3 @@ Feature: Testing lab_python_oop
             | 1    | kvadrat      | lime  | 1     |
             | 12   | kvadratik    | pink  | 144   |
             | 200  | square shape | white | 40000 |
-
-    

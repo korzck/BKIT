@@ -1,10 +1,11 @@
 from behave import *
 import sys
 
-sys.path.append("../../../lab_python_oop/lab_python_oop")
-from Circle import Circle
-from Rectangle import Rectangle
-from Square import Square
+#changed cwd to testible dir
+sys.path.append("../../lab_python_oop")
+from lab_python_oop.Rectangle import Rectangle
+from lab_python_oop.Circle import Circle
+from lab_python_oop.Square import Square
 
 @given('rectangle with sides of "{first}" and "{second}", color is "{color}" and name is "{name}"')
 def step_impl(context, first, second, name, color):
