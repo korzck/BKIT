@@ -1,5 +1,4 @@
 import sys
-#changed cwd to testible dir
 sys.path.append("../lab_python_oop")
 from lab_python_oop.Rectangle import Rectangle
 from lab_python_oop.Circle import Circle
