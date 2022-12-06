@@ -5,8 +5,8 @@
 - requests
 - flask
 - jupyter notebook
-- flask
 - aiogram
 - unittest
 - asyncio
 - gherkin (behave)
+- pipenv
